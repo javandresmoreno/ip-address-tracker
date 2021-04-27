@@ -30,6 +30,10 @@ body {
   color: var(--darkGray);
 }
 
+/* --------------------------------------------/
+|                   SITE STYLES 
+\* -------------------------------------------*/
+
 .btn-dark {
   background-color: var(--veryDarkGray);
   padding: 1rem;
@@ -81,7 +85,7 @@ body {
   background: url("/assets/images/pattern-bg.png") no-repeat 100% 100% / cover;
   text-align: center;
   padding: 20px;
-  min-height: 200px;
+  min-height: 230px;
 }
 
 .form-control {
@@ -92,6 +96,7 @@ body {
   cursor: pointer;
   outline: none;
   font-weight: 700;
+  font-size: 1rem;
 }
 
 .form-control::placeholder {
@@ -101,7 +106,7 @@ body {
 
 .form-elements {
   position: relative;
-  max-width: 380px;
+  max-width: 450px;
   margin: auto;
 }
 
@@ -109,7 +114,8 @@ body {
   min-height: 60px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  align-self: baseline;
   justify-content: center;
   padding: 0 1rem;
 }
@@ -124,7 +130,7 @@ h1.title {
   color: var(--white);
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -136,6 +142,60 @@ span.results {
 
 .map-container {
   background-color: black;
-  margin-top: -70px;
+  margin-top: -80px;
   min-height: 79vh;
+}
+
+/* --------------------------------------------/
+|               RESPONSIVE 
+\* -------------------------------------------*/
+
+@media screen and (max-width: 1200px) {
+  .display-container {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -60px;
+    min-height: auto;
+    text-align: center;
+    padding: 1rem;
+  }
+  .form-control {
+    min-width: 318px;
+  }
+
+  .form-elements {
+    max-width: 400px;
+  }
+  .info-block {
+    align-self: auto;
+    min-height: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .map-container {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .display-container {
+    margin-top: -150px;
+  }
+  .form-container {
+    min-height: 350px;
+  }
+  span.results {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .form-elements {
+    max-width: auto;
+  }
+
+  .form-control {
+    min-width: auto;
+  }
 }

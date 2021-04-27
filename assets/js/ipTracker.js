@@ -1,16 +1,6 @@
 const apiKey = "at_T9KWBtqVL4wCXm4IJnXtaHo7cpjBl";
-
-// link for avoid error to CORS Policy
-const bypassCorsUrl = "https://cors-anywhere.herokuapp.com/";
-
 const API_URL = "https://geo.ipify.org/api/";
 let currentVersion = "v1";
-
-const headersOption = {
-  headers: {
-    "Access-Control-ALlow_Origin": "*",
-  },
-};
 
 // elements to update
 let currentIp = document.getElementById("current_ip");
@@ -42,6 +32,8 @@ const updateMarker = (update_marker = [7.88282, -72.515709]) => {
 const getIPDetails = (default_ip) => {
   if (default_ip === undefined) {
     var ipUrl = `${API_URL}${currentVersion}?apiKey=${apiKey}`;
+  } else if (default_ip) {
+    var ipUrl = `${API_URL}${currentVersion}?apiKey=${apiKey}&domain=${default_ip}`;
   } else {
     var ipUrl = `${API_URL}${currentVersion}?apiKey=${apiKey}&ipAddress=${default_ip}`;
   }
@@ -56,7 +48,7 @@ const getIPDetails = (default_ip) => {
 
       updateMarker([data.location.lat, data.location.lng]);
     })
-    .catch((error) => alert("Please enter a valid IP address. (e.g. 1.1.1.1)"));
+    .catch((error) => alert("Unable to get IP details"));
 };
 
 getIPDetails();
