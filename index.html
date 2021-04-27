@@ -11,6 +11,12 @@
       href="https://lh3.googleusercontent.com/ogw/ADGmqu_KFNbAlZZYUfw_yoDX1_qlQXnYp0Jshy5T_b0nJA=s32-c-mo"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
 
     <title>Mensajeros Urbanos | Frontend Knowledge Test</title>
   </head>
@@ -40,24 +46,24 @@
         <div class="display-container">
           <div class="info-block">
             <h4 class="muted-title">IP Address</h4>
-            <span id="current_ip" class="results">192.212.174.101</span>
+            <span id="current_ip" class="results"></span>
           </div>
           <div class="info-block">
             <h4 class="muted-title">Location</h4>
-            <span id="current_town" class="results">Cape Town, SA 7530</span>
+            <span id="current_town" class="results"></span>
           </div>
           <div class="info-block">
             <h4 class="muted-title">Timezone</h4>
-            <span id="current_zone" class="results">UTC +2:00</span>
+            <span id="current_zone" class="results"></span>
           </div>
           <div class="info-block">
             <h4 class="muted-title">ISP</h4>
-            <span id="current_isp" class="results">Rain</span>
+            <span id="current_isp" class="results"></span>
           </div>
         </div>
       </section>
       <section>
-        <div id="display-map" class="map-container">MAP</div>
+        <div id="display_map" class="map-container"></div>
       </section>
     </main>
     <footer class="footer">
@@ -69,5 +75,11 @@
         >Javier Andrés Moreno T.</a
       >
     </footer>
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="./assets/js/ipTracker.js"></script>
   </body>
 </html>

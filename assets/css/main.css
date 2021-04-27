@@ -6,6 +6,7 @@
 
 :root {
   --veryDarkGray: hsl(0, 0%, 17%);
+  --veryDarkGrayHover: hsl(0, 0%, 10%);
   --darkGray: hsl(0, 0%, 59%);
   --white: #fff;
 }
@@ -30,13 +31,17 @@ body {
 }
 
 .btn-dark {
-  background-color: #2b2b2b;
+  background-color: var(--veryDarkGray);
   padding: 1rem;
   border: none;
   border-radius: 0 10px 10px 0;
   position: absolute;
   right: 0;
   cursor: pointer;
+}
+
+.btn-dark:hover {
+  background-color: var(--veryDarkGrayHover);
 }
 
 .display-container {
