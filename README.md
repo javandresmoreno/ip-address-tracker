@@ -29,4 +29,4 @@ There is also a `style-guide.md` file, which contains the information you'll nee
 
 In this link you can prove this app:
 
-1. [IP and Domain Tracker](https://http://ip-address-tracker-liart.vercel.app). Any comment will be appreciated. Thanks.
+1. [IP and Domain Tracker](https://ip-address-tracker-liart.vercel.app). Any comment will be appreciated. Thanks.
